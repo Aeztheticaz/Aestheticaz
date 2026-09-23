@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Landscape — Modern Landing Page</title>
+  <!-- Google Fonts + simple reset & custom properties -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* ========== CUSTOMIZATION ZONE ========== */
+      --brand-primary: #5a67d8;
+      --brand-secondary: #ed64a6;
+      --bg-light: #ffffff;
+      --bg-soft: #f9fafb;
+      --text-dark: #1a202c;
+      --text-muted: #4a5568;
+      --border-radius-card: 1.5rem;
+      --shadow-sm: 0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.02);
+      --shadow-md: 0 20px 25px -12px rgba(0,0,0,0.08);
+      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      /* spacing */
+      --container-padding: 2rem;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    /* header / nav */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 0;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-dark);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-primary);
+    }
+
+    .btn-primary {
+      background-color: var(--brand-primary);
+      color: white;
+      padding: 0.7rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.2s, background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background-color: #4c51bf;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1.5px solid var(--brand-primary);
+      color: var(--brand-primary);
+      background: transparent;
+      padding: 0.65rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--brand-primary);
+      color: white;
+    }
+
+    /* hero section */
+    .hero {
+      padding: 4rem 0 5rem 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, var(--text-dark), var(--brand-primary));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      max-width: 800px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* feature grid */
+    .features {
+      padding: 4rem 0;
+      background: var(--bg-soft);
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 2.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--border-radius-card);
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+      text-align: center;
+      border: 1px solid #edf2f7;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+    }
+
+    /* cta section */
+    .cta {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: linear-gradient(120deg, #f0f4ff, #fff5f7);
+      border-radius: 2rem;
+      margin: 3rem auto;
+      max-width: 1000px;
+    }
+
+    .cta h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #e2e8f0;
+      color: var(--text-muted);
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar {
+        flex-direction: column;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .container {
+        padding: 0 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">Landscape</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <a href="#" class="btn-primary">Get started →</a>
+    </nav>
+  </div>
+
+  <main>
+    <div class="container hero">
+      <h1>Launch smarter, grow faster with Landscape</h1>
+      <p>The ultimate landing page solution to convert visitors into loyal customers. Fully customizable and lightning-fast.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn-primary">Start free trial</a>
+        <a href="#" class="btn-outline">Watch demo</a>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="container">
+        <div class="section-title">Designed for impact</div>
+        <div class="grid">
+          <div class="card">
+            <div class="card-icon">⚡</div>
+            <h3>Blazing fast</h3>
+            <p>Optimized performance ensures instant load times and smooth interactions.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>Fully Customizable</h3>
+            <p>Modify colors, fonts, layout via CSS variables or your own style override.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📱</div>
+            <h3>Responsive design</h3>
+            <p>Looks perfect on any device — from mobile to large desktop screens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="cta">
+        <h2>Ready to elevate your brand?</h2>
+        <p style="margin-bottom: 1.5rem;">Join thousands of creators using Landscape to build stunning pages.</p>
+        <a href="#" class="btn-primary" style="background: var(--brand-secondary);">Get early access →</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 Landscape — All rights reserved. Customize everything in :root.</p>
+  </footer>
+</body>
+</html>

@@ -1,106 +1,239 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aestheticaz</title>
-    <link rel="stylesheet" href="style.css?v=2">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Aestheticaz builds modern websites, e-commerce stores, payment integration, delivery systems and business automation.">
+  <title>Aestheticaz</title>
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">Aestheticaz</a>
+      <nav class="navbar" aria-label="Primary navigation">
+        <ul class="nav-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#checkout">Buy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#contact" class="nav-cta">Book a call</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <img class="hero-logo" src="images/Aestheicaz logo.png" alt="Aestheticaz logo">
+          <span class="eyebrow">Digital business solutions</span>
+          <h1>Modern tech solutions that help businesses grow online.</h1>
+          <p class="hero-text">Aestheticaz builds professional websites, e-commerce stores, payment integration, delivery management and automation for businesses that want a stronger online presence.</p>
+
+          <div class="hero-buttons">
+            <a href="#services" class="primary-btn">Explore services</a>
+            <a href="https://wa.me/254746255134" class="secondary-btn" target="_blank" rel="noopener">WhatsApp us</a>
+          </div>
+
+          <div class="hero-tags">
+            <span>Websites</span>
+            <span>E-commerce</span>
+            <span>Payments</span>
+            <span>Delivery</span>
+            <span>Automation</span>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-card">
+            <h2>Launch fast with confidence</h2>
+            <p>High-impact business websites and checkout experiences built for local and online customers.</p>
+            <ul>
+              <li>Responsive website design</li>
+              <li>Secure payment setup</li>
+              <li>Order and delivery automation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">What we offer</span>
+          <h2>Solutions for every stage of your business.</h2>
+          <p>From simple websites to full e-commerce, payment gateways and delivery workflows, we help your business go online quickly.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="images/webdesign.jpeg" alt="Custom website design">
+            <h3>Custom Websites</h3>
+            <p>Beautiful, responsive websites that showcase your brand and capture leads.</p>
+          </article>
+          <article class="service-card">
+            <img src="images/payment.jpeg" alt="Payment integration">
+            <h3>Payment Integration</h3>
+            <p>Secure payment setup with local and international gateways for smooth customer checkout.</p>
+          </article>
+          <article class="service-card">
+            <img src="images/e-commerce.jpeg" alt="E-commerce systems">
+            <h3>E-commerce Systems</h3>
+            <p>Online stores designed to convert visitors into customers and manage orders easily.</p>
+          </article>
+          <article class="service-card">
+            <img src="images/logistics.jpeg" alt="Delivery systems">
+            <h3>Delivery Systems</h3>
+            <p>Automated delivery and fulfillment tools to keep orders moving from store to customer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="checkout" class="purchase-section">
+      <div class="container purchase-grid">
+        <div class="purchase-card">
+          <span class="eyebrow">Digital product</span>
+          <h2>Buy the Aestheticaz Starter Pack</h2>
+          <p>Pay with M-Pesa and receive an instant delivery link after your payment completes.</p>
+
+          <div class="price-block">
+            <span class="price-label">One-time purchase</span>
+            <strong>KES 1200</strong>
+          </div>
+
+          <label class="input-label" for="phoneNumber">M-Pesa phone number</label>
+          <input id="phoneNumber" class="input-field" type="tel" placeholder="254712345678" value="2547" autocomplete="tel">
+
+          <button type="button" id="buyButton" class="primary-btn">Pay with M-Pesa</button>
+            <button type="button" id="checkButton" class="secondary-btn">Check download link</button>
+            <div id="paymentStatus" class="status-message" aria-live="polite"></div>
+            <div id="downloadLink" class="download-link"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-grid">
+        <div class="contact-panel">
+          <div class="section-header">
+            <span class="eyebrow">Ready to start?</span>
+            <h2>Talk to us and launch your next project.</h2>
+            <p>Get a free consultation, pricing estimate, and recommended package for your business needs.</p>
+          </div>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <a href="tel:+254746255134">+254 746 255 134</a>
             </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <img class="hero-logo" src="images/Aestheicaz logo.png" alt="Aestheticaz Logo">
-                <h1>Modern Tech Solutions For Businesses</h1>
-                <p class="hero-text">
-                    Aestheticaz helps businesses build a strong online presence through
-                    professional websites, e-commerce systems, payment integration,
-                    delivery systems, and digital business solutions.
-                </p>
-                <div class="hero-services">
-                    <span>Custom Websites</span>
-                    <span>E-commerce Stores</span>
-                    <span>Payment Integration</span>
-                    <span>Delivery Systems</span>
-                    <span>Business Automation</span>
-                </div>
-                <div class="hero-buttons">
-                    <a href="#services" class="primary-btn">Explore Services</a>
-                    <a href="https://wa.me/254746255134" class="secondary-btn">WhatsApp Us</a>
-                </div>
+            <div class="contact-item">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/254746255134" target="_blank" rel="noopener">Chat on WhatsApp</a>
             </div>
-        </section>
-
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="left-panel">
-                    <div class="logo-section">
-                        <img class="logo-img" src="images/Aestheicaz logo.png" alt="Aestheticaz Logo">
-                        <div>
-                            <h1>Aestheticaz</h1>
-                        </div>
-                    </div>
-
-                    <h2 class="section-title">Services</h2>
-                    <div class="services-grid">
-                        <div class="card">
-                            <img src="images/webdesign.jpeg" alt="Web Design Icon">
-                            <p>Custom Websites</p>
-                        </div>
-                        <div class="card">
-                            <img src="images/payment.jpeg" alt="Payment Icon">
-                            <p>Payment Integration</p>
-                        </div>
-                        <div class="card">
-                            <img src="images/e-commerce.jpeg" alt="E-commerce Icon">
-                            <p>E-commerce Systems</p>
-                        </div>
-                        <div class="card">
-                            <img src="images/logistics.jpeg" alt="Logistics Icon">
-                            <p>Delivery Systems</p>
-                        </div>
-                    </div>
-                </div>
-
-                <aside class="right-panel">
-                    <p>Have any questions? Contact us through the following means below.</p>
-                    <h2 class="section-title">Contact</h2>
-                    <ul class="contact-list">
-                        <li>
-                            <p><em>Give us a call:</em></p>
-                            <strong>Phone</strong>
-                            <a href="tel:+254746255134">+254746255134</a>
-                        </li>
-                        <li>
-                            <p><em>Or reach us via WhatsApp:</em></p>
-                            <strong>WhatsApp</strong>
-                            <a href="https://wa.me/+254746255134">+254746255134</a>
-                        </li>
-                        <li>
-                            <p><em>Send us an email:</em></p>
-                            <strong>Email</strong>
-                            <a href="mailto:aestheticazke@gmail.com">aestheticazke@gmail.com</a>
-                        </li>
-                    </ul>
-                    <button class="book-btn">Book a consultation</button>
-                    <div class="info-box">
-                        <p>Helping businesses go online fast with simple, affordable tech solutions.</p>
-                    </div>
-                </aside>
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a href="mailto:aestheticazke@gmail.com">aestheticazke@gmail.com</a>
             </div>
-        </section>
-    </main>
+          </div>
+
+          <a href="https://wa.me/254746255134" class="primary-btn contact-btn" target="_blank" rel="noopener">Start a conversation</a>
+        </div>
+
+        <div class="testimonial-panel">
+          <div class="testimonial-card">
+            <p>"Aestheticaz delivered a professional online store quickly and our customers love the seamless checkout experience."</p>
+            <cite>— Local Retail Partner</cite>
+          </div>
+
+          <div class="info-box">
+            <h3>Why choose Aestheticaz?</h3>
+            <p>We build polished digital products without the agency markup and keep your launch fast, reliable and affordable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Aestheticaz. Crafted for businesses that want to grow online.</p>
+    </div>
+  </footer>
+
+  <script>
+    const statusElement = document.getElementById('paymentStatus');
+    const buyButton = document.getElementById('buyButton');
+
+    function showStatus(message, type = 'info') {
+      statusElement.textContent = message;
+      statusElement.className = `status-message ${type}`;
+    }
+
+    buyButton.addEventListener('click', async () => {
+      const phone = document.getElementById('phoneNumber').value.trim();
+      if (!phone) {
+        showStatus('Enter your M-Pesa phone number first.', 'error');
+        return;
+      }
+
+      showStatus('Sending STK push to your phone…', 'info');
+      buyButton.disabled = true;
+
+      try {
+        const response = await fetch('/api/payments/checkout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ phone, amount: 1200, product: 'Aestheticaz Starter Pack' })
+        });
+
+        const result = await response.json();
+        if (!response.ok || !result.success) {
+          showStatus(result.message || 'Payment request failed. Try again.', 'error');
+          return;
+        }
+
+        showStatus(result.message || 'STK push sent. Follow the payment prompt on your phone.', 'success');
+      } catch (error) {
+        showStatus('Network error. Please try again later.', 'error');
+        console.error(error);
+      } finally {
+        buyButton.disabled = false;
+      }
+    });
+
+      document.getElementById('checkButton').addEventListener('click', async () => {
+        const phone = document.getElementById('phoneNumber').value.trim();
+        if (!phone) {
+          showStatus('Enter your M-Pesa phone number to check the download status.', 'error');
+          return;
+        }
+
+        showStatus('Checking download status…', 'info');
+        try {
+          const response = await fetch(`/api/downloads/status?phone=${encodeURIComponent(phone)}`);
+          const result = await response.json();
+          if (!response.ok || !result.success) {
+            showStatus(result.message || 'Unable to check status.', 'error');
+            return;
+          }
+
+          if (result.ready) {
+            showStatus('Download ready! Click the link below.', 'success');
+            document.getElementById('downloadLink').innerHTML = `<a href="${result.downloadUrl}" class="primary-btn" target="_blank" rel="noopener">Download your starter pack</a>`;
+          } else {
+            showStatus(result.message || 'Your payment is still pending. Check again in a moment.', 'info');
+          }
+        } catch (error) {
+          showStatus('Unable to check download status. Please try again.', 'error');
+          console.error(error);
+        }
+      });
+  </script>
 </body>
 </html>
